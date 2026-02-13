@@ -6,14 +6,15 @@ def main(page: ft.Page):
 
     def verificar_resposta(e):
         if e.control.content == resposta_correta:
-            mensagem.value = "Parabéns"
+            mensagem.value = "Parabéns!"
         else:
             mensagem.value = "Resposta Errada"
             page.update()
 
         # page.add(ft.Text(e.control.content))
 
-    page.title = "Game: Adivinhe a Imagem"
+    page.title = "Game: Adivinhe a Imagem!!"
+    page.bgcolor = "#e0a3ff"
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
 
@@ -21,7 +22,7 @@ def main(page: ft.Page):
         ft.Column(
             controls=[
                 ft.Text(
-                    "Adivinhe a Imagem",
+                    "Adivinhe a Imagem!!",
                     size= 24,
                     weight="bold"
                 ),
@@ -33,14 +34,20 @@ def main(page: ft.Page):
                     controls=[
                         ft.Button(
                             content="Cachorro",
+                            bgcolor="purple",
+                            color="white",
                             on_click=verificar_resposta
                         ),
                         ft.Button(
                             content="Gato",
+                            bgcolor="purple",
+                            color="white",
                             on_click=verificar_resposta
                         ),
                         ft.Button(
                             content="Coelho",
+                            bgcolor="purple",
+                            color="white",
                             on_click=verificar_resposta
                         )
                     ],
